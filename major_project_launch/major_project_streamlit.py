@@ -4,8 +4,8 @@ import plotly.graph_objects as go
 
 
 
-from major_project import major_project_deco as mfd
-from major_project import major_project_functions as mpf
+from major_project.major_project import major_project_deco as mfd
+from major_project.major_project import major_project_functions as mpf
 import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
