@@ -1,0 +1,33 @@
+E = 200*10^3MPa
+factor = 5/(384*E)
+w = 2kN/m
+I = 200*10^6mm^4
+l = 6m
+dl = 360
+I_ = w*factor*l^4*dl/l|mm^4
+
+
+factor_1 = 1/(48*E)
+P = 120kN
+'Central point loads not necessary
+
+I = factor_1*P*l^3*dl/(l)|mm^4
+'Point load at any position
+a = l/2
+Id = factor_1*P*l^3*dl/(l)*(3*a/l - 4*(a/l)^3)|mm^4
+'Multiple point loads	
+
+factor_mult = 1/(192*E)
+n = 2
+Id_even = factor_mult*P*l^3*dl/(l)*((n*(3 - 1/2*(1 + 4/n^2))))|mm^4
+n = 3
+Id_od = factor_mult*P*l^3*dl/(l)*((n - 1/n)*(n*(3 - 1/2*(1 + 4/n^2))))|mm^4
+
+
+
+
+
+
+
+
+
