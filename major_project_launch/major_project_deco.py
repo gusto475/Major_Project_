@@ -1,6 +1,6 @@
 
 
-from major_project import major_project_functions as mpf
+import major_project_functions as mpf
 
 
 import handcalcs
