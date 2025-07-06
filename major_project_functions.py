@@ -166,6 +166,7 @@ def possible_sections_g(data: pd.DataFrame,I_req_:float,Delta_p: float,
     new_daf['limit_d'] = (L.value*1000/new_daf['def']).round(0).astype(int)
     new_daf["sect+L/"] = new_daf.index + " L/" + new_daf["limit_d"].astype(str)
     new_daf["L/"] = " L/" + new_daf["limit_d"].astype(str)
+    st.dataframe(new_daf)
     new_daf["m_p"] = ((new_daf.loc[:,"Zx"]*mm**3)*f_y*phi)
     new_daf["m_f"] = m_f
     st.dataframe(new_daf["m_p"])
