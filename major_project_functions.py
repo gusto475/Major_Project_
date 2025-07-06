@@ -7,8 +7,8 @@ from dataclasses import dataclass
 from math import sqrt, ceil
 from IPython.display import Markdown as md
 import numpy as np
-from eng_module_2.general import general_calcs as gc
-from eng_module_2.sections import sections_db as sdb
+# from eng_module_2.general import general_calcs as gc
+# from eng_module_2.sections import sections_db as sdb
 from math import pi, sqrt
 si.environment('structural')
 from IPython.display import display, Math, Latex
@@ -17,10 +17,22 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
+
+aisc_csv =  "aisc_w_si.csv"
+def aisc_w_sections(csv:str) ->pd.DataFrame:
+    """
+    Returns the DataFrame of aisc_w_si.csv file
+    """
+    df = pd.read_csv(csv) 
+    df[["Ix","Iy"]] = df[["Ix","Iy"]]*1e6
+    df[["Sx","Sy","Zx", "Zy","J"]] = df[["Sx","Sy","Zx", "Zy","J"]]*1e3
+    df["Cw"] = df["Cw"]*1e9
+    df = df.set_index('AISC_Manual_Label')
+    return df
 ### Constants and databases and general functions
-gc.aisc_w_sections()
-sdb.aisc_w_sections()
-sdb.csa_w_sections
+data = aisc_w_sections(aisc_csv)
+
+
 f_y = 345*si.MPa
 E=200e3*si.MPa
 G=77e3*si.MPa

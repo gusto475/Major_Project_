@@ -68,7 +68,7 @@ Delta_p=check_2_values["Delta_p"]
 l=check_2_values["l"]
 m_f = check_2_values['m_f']
 
-data = mpf.sdb.aisc_w_sections()
+data = mpf.data
 
 section_tables = mpf.possible_sections_g(data,I_req_,Delta_p,l,m_f,f_y*si.MPa)
 st.markdown("Table of 10 closest possible sections")
