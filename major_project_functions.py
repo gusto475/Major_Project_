@@ -167,7 +167,10 @@ def possible_sections_g(data: pd.DataFrame,I_req_:float,Delta_p: float,
     new_daf["sect+L/"] = new_daf.index + " L/" + new_daf["limit_d"].astype(str)
     new_daf["L/"] = " L/" + new_daf["limit_d"].astype(str)
     new_daf["m_p"] = ((new_daf.loc[:,"Zx"]*mm**3)*f_y*phi)
-    new_daf['DCR'] = round((new_daf["m_p"]**-1*m_f),2)
+    new_daf["m_f"] = m_f
+    st.dataframe(new_daf["m_p"])
+    st.dataframe(new_daf["m_f"])
+    new_daf['DCR'] = round(((new_daf["m_f"])/new_daf["m_p"]),2)
     new_daf["sect+DCR"] = new_daf.index +" " + new_daf["DCR"].map("{:.2f}".format)
     mask_2 = (new_daf["DCR"]<1.5)
     new_daf = new_daf.loc[mask_2]
