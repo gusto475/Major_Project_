@@ -225,8 +225,8 @@ def actual_def_g(I_prov,w_l,w,l,E):
     Delta = (w_l*w*5*l**4)/(384*E*I_prov)
     return Delta
 def lim_d(l,Delta):
-    lim_d = f'L/{int(round(l/Delta,0))}'
-    return lim_d
+    lim_d_ = f'L/{int(round(l/Delta,0))}'
+    return lim_d_
 def mrc_g(Mr,m_f):
     """
     Carries out the DCR ratio check for factored moment to moment of resistance
