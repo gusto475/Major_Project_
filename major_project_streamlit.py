@@ -30,15 +30,15 @@ st.subheader("Scope and Assumptions ")
 st.write("Beams are assumed to be simply supported,and compression flanges continuously braced.")
 st.write("The  sections used are from the [AISC Shapes Database (v15.0)](https://www.aisc.org/globalassets/aisc/manual/v15.0-shapes-database/aisc-shapes-database-v15.0.xlsx).")
 st.write("Users of other national databases may select sizes based on similar section properties given in table 1: table" \
-"of 10 closest possible sections")
-st.write("Units are SI")
+"of 10 closest possible sections.")
+st.write("Units are SI.")
 st.write("The app sizes steel beams based on live load deflection/ultimate moment of resistance for plastic" \
-" sections")
+" sections.")
 st.write("The ultimate span moment and the required moment of inertia required under specified live loads is calculated. List of sections that exceed the computed values are"
           " estimated, tabulated and plotted." )
 
-st.write("Based on user selection based on priority of limiting deflection or section weight, short calculations are provided for the section")
-st.write("Please note that this tool is meant for preliminary sizing only. Independent checks of the results along with detailed design by a competent engineer must still be carried out")
+st.write("Based on user selection based on priority of limiting deflection or section weight, short calculations are provided for the section.")
+st.write("Please note that this tool is meant for concept selection and preliminary sizing only. Independent checks of the results along with detailed design by a competent engineer must still be carried out")
 st.sidebar.subheader("Inputs")
 phi = 0.9
 omega_2 = 1.0
