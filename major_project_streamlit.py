@@ -38,6 +38,7 @@ st.write("The ultimate span moment and the required moment of inertia required u
           " estimated, tabulated and plotted." )
 
 st.write("Based on user selection based on priority of limiting deflection or section weight, short calculations are provided for the section")
+st.write("Please note that this tool is meant for preliminary sizing only. Independent checks of the results along with detailed design by a competent engineer must still be carried out")
 st.sidebar.subheader("Inputs")
 phi = 0.9
 omega_2 = 1.0
